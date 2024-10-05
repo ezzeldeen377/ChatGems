@@ -4,6 +4,8 @@ import 'package:chat_app/data/repository/get_messages_from_gemini_repository.dar
 import 'package:dartz/dartz.dart';
 import 'package:injectable/injectable.dart';
 
+import '../failure.dart';
+
 @Injectable(as: GetMessagesFromGeminiRepository)
 class GetMessagesFromGeminiRepositoryImpl
     implements GetMessagesFromGeminiRepository {
