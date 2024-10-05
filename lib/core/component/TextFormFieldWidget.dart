@@ -8,7 +8,7 @@ typedef MyValidator = String? Function(String?);
 
 class TextFormFieldWidget extends StatefulWidget {
   String hint;
-  ImageIcon? suffixIcon;
+  Widget? suffixIcon;
   Widget? prefixIcon;
   bool? obscureText;
   MyValidator? validator;
@@ -40,20 +40,7 @@ class _TextFormFieldWidgetState extends State<TextFormFieldWidget> {
           getRegularStyle(color: AppColors.whiteColor, size: AppFontSizes.s14),
       decoration: InputDecoration(
         contentPadding: EdgeInsets.symmetric(horizontal: AppPadding.p10),
-        suffixIcon: IconButton(
-            onPressed: () {
-              if (widget.show == true) {
-                widget.obscureText = false;
-                widget.show = false;
-              } else {
-                widget.obscureText = true;
-                widget.show = true;
-              }
-              setState(() {});
-            },
-            icon: widget.show
-                ? widget.suffixIcon ?? const SizedBox.shrink()
-                : widget.SuffixIconShowed ?? const SizedBox.shrink()),
+        suffixIcon: widget.suffixIcon,
         hintText: widget.hint,
         hintStyle: getLightStyle(
             color: AppColors.whiteColor.withOpacity(.5),

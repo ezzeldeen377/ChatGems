@@ -7,6 +7,6 @@ class ServerError extends Failure {
   ServerError({required super.errorMessage});
 }
 
-class NetworkEroor extends Failure {
-  NetworkEroor({required super.errorMessage});
+class NetworkError extends Failure {
+  NetworkError({required super.errorMessage});
 }
