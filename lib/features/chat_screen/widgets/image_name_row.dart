@@ -1,3 +1,8 @@
+import 'package:chat_app/core/config/app_colors.dart';
+import 'package:chat_app/core/config/app_font_manager.dart';
+import 'package:chat_app/core/config/app_size.dart';
+import 'package:chat_app/core/config/app_spaces.dart';
+import 'package:chat_app/core/config/text_style_manager.dart';
 import 'package:flutter/material.dart';
 
 class ImageNameRow extends StatelessWidget {
@@ -8,7 +13,22 @@ class ImageNameRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      children: [CircleAvatar()],
+      children: [
+        CircleAvatar(
+          radius: AppSize.s12,
+          child: Image.asset(
+            imagePath,
+            width: double.infinity,
+            fit: BoxFit.fill,
+          ),
+        ),
+        horizontalSpace(AppPadding.p10),
+        Text(
+          name,
+          style:
+              getBoldStyle(color: AppColors.whiteColor, size: AppFontSizes.s18),
+        )
+      ],
     );
   }
 }
