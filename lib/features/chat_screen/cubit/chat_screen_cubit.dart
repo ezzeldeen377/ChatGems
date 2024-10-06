@@ -19,14 +19,18 @@ class ChatScreenCubit extends Cubit<ChatScreenState> {
   static ChatScreenCubit get(BuildContext context) =>
       BlocProvider.of<ChatScreenCubit>(context);
   void getMessage() async {
-    chats.add(MessagesModel(message: controller.text, state: 'send'));
+    String prompt = controller.text;
+    controller.clear();
+
+    chats.add(MessagesModel(message: prompt, state: 'send'));
+    chats.add(MessagesModel(message: 'typing...', state: 'recived'));
     emit(ChatScreenLoading());
-    var response = await repository.getMessage(controller.text);
+    var response = await repository.getMessage(prompt);
     response.fold((error) {
       print(error.errorMessage);
       emit(ChatScreenError(errorMessage: error.errorMessage));
     }, (response) {
-      chats.add(MessagesModel(message: response.text!, state: 'recived'));
+      chats.last.message = response.text!;
       emit(ChatScreenSuccess(anwser: response));
     });
   }

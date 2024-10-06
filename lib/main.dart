@@ -1,8 +1,10 @@
 import 'dart:io';
 
+import 'package:chat_app/core/router/route_generator.dart';
+import 'package:chat_app/core/router/routes.dart';
 import 'package:chat_app/data/di/di.dart';
 import 'package:chat_app/features/chat_screen/ui/chat_screen.dart';
-import 'package:chat_app/features/chat_screen/ui/cubit/chat_screen_cubit.dart';
+import 'package:chat_app/features/chat_screen/cubit/chat_screen_cubit.dart';
 import 'package:chat_app/firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -27,11 +29,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      home: BlocProvider<ChatScreenCubit>(
-        create: (context) => getIt<ChatScreenCubit>(),
-        child: ChatScreen(),
-      ),
+      debugShowCheckedModeBanner: false,
+      title: 'ChatGems',
+      initialRoute: Routes.allChatsScreen,
+      onGenerateRoute: RouteGenerator.OnGenerate,
     );
   }
 }

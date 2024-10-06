@@ -3,6 +3,7 @@ import 'package:chat_app/core/config/app_font_manager.dart';
 import 'package:chat_app/core/config/app_size.dart';
 import 'package:chat_app/core/config/text_style_manager.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class PersonChatBox extends StatelessWidget {
   String text;
@@ -19,8 +20,8 @@ class PersonChatBox extends StatelessWidget {
           padding: const EdgeInsets.only(left: 8.0, top: 8),
           child: CircleAvatar(
             radius: AppSize.s20,
-            child: Image.asset(
-              'assets/images/ahmed.png',
+            child: SvgPicture.asset(
+              'assets/images/Gemini.svg',
               width: double.infinity,
               fit: BoxFit.fill,
             ),
@@ -34,9 +35,9 @@ class PersonChatBox extends StatelessWidget {
             ),
             child: Container(
               alignment: Alignment.topLeft,
-              margin: EdgeInsets.symmetric(
+              margin: const EdgeInsets.symmetric(
                   horizontal: AppMargin.m18, vertical: AppMargin.m5),
-              padding: EdgeInsets.symmetric(
+              padding: const EdgeInsets.symmetric(
                   horizontal: AppPadding.p10, vertical: AppPadding.p10),
               decoration: BoxDecoration(
                   color: AppColors.lightBlackColor,
