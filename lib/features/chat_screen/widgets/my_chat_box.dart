@@ -18,9 +18,9 @@ class MyChatBox extends StatelessWidget {
             constraints:
                 BoxConstraints(maxWidth: MediaQuery.of(context).size.width),
             child: Container(
-              margin: EdgeInsets.symmetric(
+              margin: const EdgeInsets.symmetric(
                   horizontal: AppMargin.m18, vertical: AppMargin.m5),
-              padding: EdgeInsets.symmetric(
+              padding: const EdgeInsets.symmetric(
                   horizontal: AppPadding.p10, vertical: AppPadding.p10),
               decoration: BoxDecoration(
                   gradient: AppColors.orangeRedGradaintColor,

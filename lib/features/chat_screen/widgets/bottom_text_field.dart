@@ -3,7 +3,7 @@ import 'package:chat_app/core/config/app_assets.dart';
 import 'package:chat_app/core/config/app_colors.dart';
 import 'package:chat_app/core/config/app_size.dart';
 import 'package:chat_app/core/config/app_spaces.dart';
-import 'package:chat_app/features/chat_screen/ui/cubit/chat_screen_cubit.dart';
+import 'package:chat_app/features/chat_screen/cubit/chat_screen_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 

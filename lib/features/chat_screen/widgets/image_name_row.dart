@@ -4,6 +4,7 @@ import 'package:chat_app/core/config/app_size.dart';
 import 'package:chat_app/core/config/app_spaces.dart';
 import 'package:chat_app/core/config/text_style_manager.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class ImageNameRow extends StatelessWidget {
   String name;
@@ -15,8 +16,8 @@ class ImageNameRow extends StatelessWidget {
     return Row(
       children: [
         CircleAvatar(
-          radius: AppSize.s12,
-          child: Image.asset(
+          radius: AppSize.s16,
+          child: SvgPicture.asset(
             imagePath,
             width: double.infinity,
             fit: BoxFit.fill,

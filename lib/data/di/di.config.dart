@@ -11,7 +11,7 @@
 import 'package:get_it/get_it.dart' as _i174;
 import 'package:injectable/injectable.dart' as _i526;
 
-import '../../features/chat_screen/ui/cubit/chat_screen_cubit.dart' as _i924;
+import '../../features/chat_screen/cubit/chat_screen_cubit.dart' as _i924;
 import '../data_source/get_messages_from_gemini_data_source.dart' as _i397;
 import '../data_source/get_messages_from_gemini_data_source_impl.dart' as _i593;
 import '../repository/get_messages_from_gemini_repository.dart' as _i852;
